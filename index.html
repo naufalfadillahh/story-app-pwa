@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="in">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Story App</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <link rel="stylesheet" href="/src/styles.css" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+    <header>
+      <nav>
+        <a href="#/" id="nav-home" style="display: none">Home</a>
+        <a href="#/add" id="nav-add" style="display: none">Tambah Cerita</a>
+        <a href="#/favorites" id="nav-favorites" style="display: none">Favorit</a>
+        <a href="#/" id="nav-logout" style="display: none">Logout</a>
+
+        <a href="#/login" id="nav-login" style="display: block">Login</a>
+        <a href="#/register" id="nav-register" style="display: block">Register</a>
+      </nav>
+    </header>
+
+    <main id="app-container"></main>
+    
+    <div id="main-content"></div>
+
+    <button id="notif-toggle" aria-label="Aktifkan Notifikasi">🔔</button>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
