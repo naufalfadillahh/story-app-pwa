@@ -19,7 +19,7 @@ class RegisterView {
           </div>
           <button type="submit">Register</button>
         </form>
-        <div id="error-message" class="error-message" style="color: red;"></div>
+        <div id="error-message" class="error-message"></div>
         <p>Sudah punya akun? <a href="#/login">Login di sini</a></p>
       </section>
     `;

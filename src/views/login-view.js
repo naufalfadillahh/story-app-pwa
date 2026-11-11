@@ -4,6 +4,7 @@ class LoginView {
     return `
       <section class="auth-page">
         <h1 id="main-content">Login</h1>
+        <p class="auth-note">Aplikasi ini memakai <b>Dicoding Story API</b>. Masuk dengan akun Story API kamu, atau buat akun gratis lewat halaman Register.</p>
         <form id="login-form">
           <div>
             <label for="email">Email:</label>
@@ -15,7 +16,7 @@ class LoginView {
           </div>
           <button type="submit">Login</button>
         </form>
-        <div id="error-message" class="error-message" style="color: red;"></div>
+        <div id="error-message" class="error-message"></div>
         <p>Belum punya akun? <a href="#/register">Register di sini</a></p>
       </section>
     `;
