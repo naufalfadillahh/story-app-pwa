@@ -22,6 +22,9 @@ class AuthPresenter {
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
       errorMessage.textContent = '';
+      const button = form.querySelector('button[type="submit"]');
+      button.disabled = true;
+      button.textContent = 'Memproses...';
       try {
         const email = event.target.email.value;
         const password = event.target.password.value;
@@ -31,10 +34,11 @@ class AuthPresenter {
         this.saveTokenToLocalStorage(result.loginResult.token);
         await FavoriteStoryDB.saveAuthToken(result.loginResult.token); // (Kriteria 4 Advance)
 
-        alert('Login Berhasil!');
         window.location.hash = '#/';
       } catch (error) {
-        errorMessage.textContent = `Login Gagal: ${error.message}`;
+        errorMessage.textContent = `Login gagal: ${error.message}`;
+        button.disabled = false;
+        button.textContent = 'Login';
       }
     });
   }
